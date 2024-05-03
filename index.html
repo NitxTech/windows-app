@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nitx webOS Signage</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Loading screen container -->
+    <div id="loadingScreen">
+        <img src="assets/img/logo_color.svg" alt="Loading...">
+    </div>
+
+    <script>
+        // Delay hiding the loading screen
+        setTimeout(function() {
+            document.getElementById("loadingScreen").style.display = 'none';
+            
+            // After hiding the loading screen, redirect to the specified URL
+            window.location.href = "https://nitx.io/ns";
+        }, 8000);  // 8 seconds delay
+    </script>
+</body>
+</html>

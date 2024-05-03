@@ -1,0 +1,28 @@
+{
+  "id": "com.lg.app.signage",
+  "title": "Nitx",
+  "main": "index.html",
+  "icon": "icon.png",
+  "bgColor": "#ddd",
+  "bgImage": "Big_icon.png",
+  "type": "web",
+  "vendor": "Nitx Signage",
+  "version": "1.5.6",
+  "appDescription": "Nitxe is an app that gives you control to push and update content to your screen",
+  "pointerSupport": true,
+  "closeOnRotation": false,
+  "disableBackHistoryAPI": true,
+  "handlesRelaunch": false,
+  "supportPortraitMode": true,
+  "supportTouchMode": "virtual",
+  "transparent": false,
+  "virtualTouch": {
+      "verticalThreshold": 20,
+      "horizontalThreshold": 50,
+      "positionEventOnPress": true,
+      "shortTouchThreshold": 30
+  },
+  "accessibility": {
+    "supportsAudioGuidance": true
+  }
+}

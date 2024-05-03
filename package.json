@@ -1,0 +1,19 @@
+{
+  "name": "mainnitx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package:win": "electron-packager . --out=dist --platform=win32 --arch=x64 --executable-name=mainnitx --win32metadata.CompanyName=\"Your Company\" --win32metadata.ProductName=\"Main Nitx\" --win32metadata.FileDescription=\"Main Nitx Application\" --win32metadata.OriginalFilename=\"mainnitx.exe\" --icon=icon.png",
+    "package:linux": "electron-packager . --out=dist --platform=linux --arch=x64 --executable-name=mainnitx --icon=icon.png",
+    "package:all": "npm run package:win && npm run package:linux"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.1",
+    "electron-packager": "^17.1.2"
+  }
+}
