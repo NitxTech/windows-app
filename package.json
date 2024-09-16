@@ -4,16 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron-forge start",
     "package:win": "electron-packager . --out=dist --platform=win32 --arch=x64 --executable-name=mainnitx --win32metadata.CompanyName=\"Your Company\" --win32metadata.ProductName=\"Main Nitx\" --win32metadata.FileDescription=\"Main Nitx Application\" --win32metadata.OriginalFilename=\"mainnitx.exe\" --icon=icon.png",
     "package:linux": "electron-packager . --out=dist --platform=linux --arch=x64 --executable-name=mainnitx --icon=icon.png",
-    "package:all": "npm run package:win && npm run package:linux"
+    "package:all": "npm run package:win && npm run package:linux",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
     "electron": "^30.0.1",
     "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
