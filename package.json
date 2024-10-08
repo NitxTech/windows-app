@@ -9,7 +9,24 @@
     "package:linux": "electron-packager . --out=dist --platform=linux --arch=x64 --executable-name=mainnitx --icon=icon.png",
     "package:all": "npm run package:win && npm run package:linux",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "build":  "electron-builder"
+  },
+  "build": {
+    "appId": "mainnitx",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "mainnitx-uninstaller",
+      "allowToChangeInstallationDirectory": false
+    }
   },
   "keywords": [],
   "author": "",
@@ -24,6 +41,7 @@
     "@electron-forge/plugin-fuses": "^7.5.0",
     "@electron/fuses": "^1.8.0",
     "electron": "^30.0.1",
+    "electron-builder": "^25.1.7",
     "electron-packager": "^17.1.2"
   },
   "dependencies": {
