@@ -10,7 +10,7 @@
     "package:all": "npm run package:win && npm run package:linux",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "build":  "electron-builder"
+    "build": "electron-builder"
   },
   "build": {
     "appId": "mainnitx",
@@ -40,7 +40,7 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
     "@electron-forge/plugin-fuses": "^7.5.0",
     "@electron/fuses": "^1.8.0",
-    "electron": "^30.0.1",
+    "electron": "^30.5.1",
     "electron-builder": "^25.1.7",
     "electron-packager": "^17.1.2"
   },
