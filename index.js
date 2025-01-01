@@ -7,7 +7,7 @@ function createWindow() {
     width: width,
     height: height,
     fullscreen: true,
-    autoHideMenuBar: true,
+    autoHideMenuBar: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
@@ -26,7 +26,7 @@ function createWindow() {
         { label: "Refresh", click: () => win.reload() },
         {
           label: "Link Screen",
-          click: () => win.loadURL("https://nitx.io/ns"),
+          click: () => win.loadURL("https://nitx.io/"),
         },
         { label: "Quit", click: () => app.quit() },
       ],
