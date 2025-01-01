@@ -7,7 +7,11 @@ function createWindow() {
     width: width,
     height: height,
     fullscreen: true,
+<<<<<<< HEAD
     autoHideMenuBar: false,
+=======
+    autoHideMenuBar: true, // Set autoHideMenuBar to true to hide the menu bar
+>>>>>>> 8d1b0ffadcb75e86a43c02a5efb8359428e179ee
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
@@ -34,7 +38,11 @@ function createWindow() {
   ];
 
   const menu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(menu);
+  // Instead of setting the application menu, we'll use the context menu
+  win.webContents.on('context-menu', (e, params) => {
+    e.preventDefault();
+    menu.popup({ window: win, x: params.x, y: params.y });
+  });
 }
 
 app.whenReady().then(() => {
