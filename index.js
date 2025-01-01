@@ -7,11 +7,7 @@ function createWindow() {
     width: width,
     height: height,
     fullscreen: true,
-<<<<<<< HEAD
-    autoHideMenuBar: false,
-=======
-    autoHideMenuBar: true, // Set autoHideMenuBar to true to hide the menu bar
->>>>>>> 8d1b0ffadcb75e86a43c02a5efb8359428e179ee
+    autoHideMenuBar: false, // Set autoHideMenuBar to true to hide the menu bar
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
@@ -30,7 +26,7 @@ function createWindow() {
         { label: "Refresh", click: () => win.reload() },
         {
           label: "Link Screen",
-          click: () => win.loadURL("https://nitx.io/"),
+          click: () => win.loadURL("https://nitx.io/ns"),
         },
         { label: "Quit", click: () => app.quit() },
       ],
@@ -39,7 +35,7 @@ function createWindow() {
 
   const menu = Menu.buildFromTemplate(template);
   // Instead of setting the application menu, we'll use the context menu
-  win.webContents.on('context-menu', (e, params) => {
+  win.webContents.on("context-menu", (e, params) => {
     e.preventDefault();
     menu.popup({ window: win, x: params.x, y: params.y });
   });
