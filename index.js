@@ -7,7 +7,7 @@ function createWindow() {
     width: width,
     height: height,
     fullscreen: true,
-    autoHideMenuBar: true, // Set autoHideMenuBar to true to hide the menu bar
+    autoHideMenuBar: false, // Set autoHideMenuBar to true to hide the menu bar
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: true,
@@ -35,7 +35,7 @@ function createWindow() {
 
   const menu = Menu.buildFromTemplate(template);
   // Instead of setting the application menu, we'll use the context menu
-  win.webContents.on('context-menu', (e, params) => {
+  win.webContents.on("context-menu", (e, params) => {
     e.preventDefault();
     menu.popup({ window: win, x: params.x, y: params.y });
   });
